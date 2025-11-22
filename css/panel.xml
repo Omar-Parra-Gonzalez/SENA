@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Panel">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo_broaster"
+            android:contentDescription="Logo Chicken Friends"
+            android:layout_marginBottom="20dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <!-- Botones -->
+            <Button
+                android:id="@+id/btnIngresos"
+                android:text="Ingresos"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:drawableTop="@drawable/ic_ingresos"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnPanel"
+                android:text="Panel"
+                android:backgroundTint="#B70F0A"
+                android:textColor="#FFFFFF"
+                android:drawableTop="@drawable/ic_panel"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnUsuarios"
+                android:text="Usuarios"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:drawableTop="@drawable/ic_user"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnInventarios"
+                android:text="Inventarios"
+                android:backgroundTint="#B3E283"
+                android:textColor="#000000"
+                android:drawableTop="@drawable/ic_inventarios"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnConfiguraciones"
+                android:text="Configuraciones"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:drawableTop="@drawable/ic_config"
+                android:padding="16dp"/>
+
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:text="Cerrar Sesión"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF"
+                android:drawableTop="@drawable/ic_logout"
+                android:padding="16dp"/>
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

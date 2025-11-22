@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel | Chicken Friends</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../imagenes/mini-logo.png">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <!-- Menú lateral blanco -->
+        <aside class="menu-lateral">
+            <div class="logo">
+                <img src="../imagenes/mini logo.webp" alt="Logo Chicken Friends">
+            </div>
+            <nav class="menu-opciones">
+                <div class="opcion activo">
+                    <img src="../imagenes/monitor.png" alt="Panel">
+                    <p>Panel</p>
+                </div>
+                <a href="./confiiguracion.html">
+                    <div class="opcion">
+                        <img src="../imagenes/config.png" alt="Inventarios">
+                        <p>Configuración</p>
+                    </div>
+                </a>
+                <a href="../index.html">
+                    <div class="opcion cerrar-sesion">
+                        <img src="../imagenes/apagar.png" alt="Cerrar Sesión">
+                        <p>Cerrar Sesión</p>
+                    </div>
+                </a>
+            </nav>
+            <img src="../imagenes/logo amarillo.png" alt="Logo amarillo" class="logo-inferior">
+        </aside>
+        <!-- Panel negro principal -->
+        <main class="panel-negro panel-ingresos">
+            <div class="usuario-info-superior">
+                <img src="../imagenes/AAA.png" alt="Mi Logo">
+                <p id="nombre-usuario"></p>
+            </div>
+            <div class="barra-superior">
+                <a href="./configuracion/productos.html">
+                    <button id="btn-buscar-productos" class="btn btn-outline-primary">Buscar Productos</button>
+                </a>
+                <div class="botones-barra">
+                    <button type="button" class="btn btn-outline-success" id="btn-imprimir">Imprimir</button>
+                    <button type="button" class="btn btn-outline-danger" id="btn-borrar-datos">Borrar</button>
+                </div>
+            </div>
+            <div class="tabla-factura">
+                <div class="encabezado-factura">
+                    <div class="info-empresa">
+                        <h4>Chicken Friends</h4>
+                        <p>Tel: 1234567</p>
+                        <p>Dirección: Cll xx # xx - xxx</p>
+                        <p>Ciudad: Cali - Valle del Cauca</p>
+                    </div>
+                <div class="info-factura">
+                    <div class="factura-numero">
+                        <p><strong><span class="texto-factura">FACTURA N°</span></strong></p>
+                        <span id="numero-factura">FV 001</span>
+                    </div>
+                    <div class="datos-cliente">
+                        <p><strong>Fecha:</strong> <span id="factura-fecha"></span></p>
+                        <p><strong>Nombre:</strong></p>
+                        <p><strong>Domicilio:</strong></p>
+                        <p><strong>Teléfono:</strong></p>
+                    </div>
+                </div>
+            </div>
+            <table id="tabla-productos" class="table table-bordered">
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Dom/Mesa</th>
+                        <th scope="col">Vendido por</th>
+                        <th scope="col">Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="productos-body">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="text-end"><strong>Total a pagar:</strong></td>
+                        <td class="text-end"><strong id="total">$0</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/productos.js"></script>
+<script src="../js/panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,700 @@
+/* Tipografía */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /*semi bold */
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff; 
+}
+
+/* Estructura general */
+.contenedor-login {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+}
+
+/* Lado izquierdo (logo) */
+.lado-izquierdo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-izquierdo img {
+    width: 90%;
+    max-width: 460px;
+}
+
+/* Lado derecho (formulario) */
+.lado-derecho {
+    flex: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translateX(-50px);
+}
+
+/* Recuadro rojo del login */
+.login-box {
+    background-color: #ff3c2a;
+    padding: 40px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+/* GIF en el borde izquierdo */
+.login-box::before {
+    content: ''; 
+    background-image: url('../imagenes/pollo-imagen-animada-0172.gif'); 
+    background-size: contain; 
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: absolute; 
+    width: 95px;         
+    height: 80%;         
+    top: 92%;            
+    transform: translateY(-50%); 
+    left: 0; 
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px; 
+    z-index: 0;
+}
+
+.login-box h1 {
+    font-weight: 800;/*Extra Bold*/
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-box h3 {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 25px;
+    color: #ffe7e3;
+    font-size: 18px;
+}
+
+/* Campos de texto */
+.input-group-text {
+    background-color: #fff;
+}
+
+.form-control {
+    border: none;
+    border-radius: 10px;
+}
+
+/* Botón (enlace estilo botón) */
+a.btn {
+    background-color: #FEFB64 !important;
+    color: #B70F0A !important;
+    border-radius: 10px;
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+
+a.btn:hover {
+    background-color: #FEFB64 !important;
+    color: #B70F0A !important;
+    text-decoration: none;
+}
+
+/* Switch (Recordar) */
+.form-check-input:checked {
+    background-color: #000;
+    border-color: #000;
+}
+.form-check.form-switch {
+    position: relative;
+    z-index: 2;
+}
+
+/* "O" Línea divisoria */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #000000;
+}
+
+.divider:not(:empty)::before {
+    margin-right: 0.75em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: 0.75em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Olvidé la contraseña */
+.link-light {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link-light:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Enlace "Regístrate aquí" */
+.link-dark {
+    color: #000;
+    font-weight: 600;
+}
+
+.link-dark:hover {
+    text-decoration: underline;
+}
+
+.login-box h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 32px; 
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.texto-condiciones {
+  font-size: 14px; 
+  color: #000000; 
+  text-align: center; 
+  font-weight: 600; 
+}
+
+.texto-condiciones strong {
+  color: #000000; 
+  font-weight: 800; 
+}
+
+.contenedor-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tarjeta blanca */
+.tarjeta-error {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Título */
+.titulo-error {
+    color: #B70F0A;
+    font-weight: 800;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* Mensaje */
+.mensaje-error {
+    color: #B70F0A;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Imagen */
+.imagen-error {
+    display: block;
+    margin: 0 auto 25px auto; 
+    width: 300px;
+}
+
+/* Botón */
+.boton-error {
+    width: 250px;
+    display: block; 
+    margin: 0 auto; 
+    padding: 10px 25px;
+    border: 2px solid #B70F0A;
+    color: #B70F0A;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.boton-error:hover {
+    background-color: #B70F0A;
+    color: #fff;
+}
+
+/* Contenedor general */
+.contenedor-principal {
+    display: flex;
+    height: 100vh;
+}
+
+/* MENÚ LATERAL BLANCO */
+.menu-lateral {
+    background-color: #fff;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 10px;
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/*LOGO INFERIOR AMARILLO*/
+.menu-lateral .logo-inferior {
+    width: 330px; 
+    height: auto; 
+    margin-top: auto; 
+    margin-bottom: 20px; 
+    object-fit: contain; 
+    filter: none; 
+}
+
+/* Logo */
+.menu-lateral .logo img {
+    width: 240px;
+    margin-bottom: 25px;
+}
+
+/* Contenedor del menú en forma de cuadrícula */
+.menu-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+/* Cada botón del menú */
+.menu-opciones .opcion {
+    background-color: #fff;
+    border: 1.5px solid #000;
+    border-radius: 15px; 
+    width: 120px;           
+    height: 100px;          
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;           
+    overflow: hidden;       
+    word-wrap: break-word;  
+}
+
+/* Íconos dentro del botón */
+.menu-opciones .opcion img {
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+/* Texto */
+.menu-opciones .opcion p {
+    color: #B70F0A;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Hover */
+.menu-opciones .opcion:hover {
+    background-color: #FEFB64;
+    transform: scale(1.05);
+}
+
+/* Opción activa */
+.menu-opciones .opcion.activo {
+  background-image: url('../imagenes/7qKu.gif'); 
+    background-size: cover;          
+    background-position: center;    
+    background-repeat: no-repeat;
+}
+
+/* PANEL PRINCIPAL NEGRO */
+.panel-negro {
+    flex: 1;
+    background-color: #0e0e0e; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TÍTULO CON ÍCONO */
+.titulo-seccion {
+    align-self: flex-start; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h4 {
+    font-size: 37px;
+    font-weight: 800;
+    color: #E61610;
+    margin: 0;
+}
+
+.titulo-seccion img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(88%) saturate(5700%) hue-rotate(357deg) brightness(91%) contrast(98%);
+}
+
+/* TARJETAS DE INVENTARIO */
+.tarjetas-inventario {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin: 90px auto 0 auto; 
+}
+
+.tarjeta {
+    background-color: #1a1a1a;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 35px 20px;
+    width: 210px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.tarjeta p {
+    color: #f0f0f0;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0;
+}
+
+.tarjeta:hover {
+    background-color: #2a2a2a;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* BOTÓN ATRÁS */
+.boton-atras {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #606060;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-size: 25px;
+}
+.boton-atras img {
+    margin-bottom: -18px; /* mueve la imagen hacia abajo */
+}
+
+.boton-atras:hover {
+    color: #606060;
+}
+
+/* ESTILOS PANEL DE CONTROL Solo en panel
+ POSICIÓN DEL NOMBRE DE USUARIO */
+.usuario-info-superior {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.usuario-info-superior img {
+  width: 35px;
+  height: 35px;
+  color: white;
+  position: relative;
+  top: -8px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* CONTENEDOR DE BÚSQUEDA Y BOTONES */
+.barra-superior {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 150px;
+  width: 100%;
+  margin-top: 70px; 
+  margin-bottom: 15px;
+  padding-left: 5px; 
+}
+
+/* BUSCADOR */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 350px;
+  height: 38px;
+  border: 1px solid #ccc;
+}
+
+.input-group-text {
+  background-color: white;
+  border: none;
+  color: #555;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.form-control {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+/* BOTONES */
+.botones-barra {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 14px;
+  height: 38px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-success {
+  color: #00b050;
+  border-color: #00b050;
+}
+
+.btn-outline-success:hover {
+  background-color: #00b050;
+  color: white;
+}
+
+.btn-outline-danger {
+  color: #e60000;
+  border-color: #e60000;
+}
+
+.btn-outline-danger:hover {
+  background-color: #e60000;
+  color: white;
+}
+
+/* TABLA FACTURA - PANEL */
+.tabla-factura {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 12px;
+  width: 100%;              
+  margin-top: 0px;        
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(255,255,255,0.15);
+  color: #000;
+}
+
+.tabla-factura table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.tabla-factura th,
+.tabla-factura td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ENCABEZADO DE FACTURA */
+.encabezado-factura {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.info-empresa {
+  width: 35%; 
+  text-align: center;
+  font-weight: 500;
+}
+
+.info-empresa h4,
+.info-empresa p {
+    margin-bottom: 0; 
+    line-height: 1.5; 
+    padding: 0;
+}
+
+.datos-cliente p {
+    margin-bottom: 0;
+    line-height: 1.5; 
+    padding: 0;
+}
+
+.info-factura {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.factura-numero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff00; 
+  border: 1px solid #000;
+  padding: 2px 6px;
+  font-weight: bold;
+  width: 50%;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.factura-numero .texto-factura {
+    position: relative;
+    top: 7px; 
+}
+
+/* Corrección para los formularios del login y registro */
+.contenedor-login .input-group {
+  width: 100%;           
+  height: auto;          
+  border-radius: 10px;    
+  border: none;           
+}
+
+.pollo-broaster {
+  background-image: url('../imagenes/entero.jpg');
+}
+
+.medio-broaster {
+  background-image: url('../imagenes/medio.jpg');
+}
+
+.cuarto-broaster {
+  background-image: url('../imagenes/cuarto.jpg');
+}
+
+.presa-broaster {
+  background-image: url('../imagenes/presa-sola.jpg');
+}
+
+.papa-amarilla {
+  background-image: url('../imagenes/Papitas-Criollas-Fritas-Saludables-RecetasFusion.jpg');
+}
+
+.papa-francesa {
+  background-image: url('../imagenes/francesa.jpg');
+}
+
+.combo-familiar {
+  background-image: url('../imagenes/nuevo-combo-familiar.png');
+}
+
+.yuca-frita {
+  background-image: url('../imagenes/yuca.jpg');
+}
+
+.coc-3 {
+  background-image: url('../imagenes/gaseosa-coca-cola-3-lt.jpg');
+}
+
+.coc-medio {
+  background-image: url('../imagenes/medio\ litro.jpg');
+}
+
+.coc-400 {
+  background-image: url('../imagenes/gaseosa-coca-cola-400-ml.jpg');
+}
+
+.jugo-na {
+  background-image: url('../imagenes/JUGOS.jpg');
+}
+
+.tarjeta {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* AJUSTE PARA LA TABLA DE PRECIOS */
+.panel-negro .TABLA-PRECIOS {
+    width: 100%; 
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+}

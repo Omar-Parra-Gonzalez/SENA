@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagos Recibidos | Chicken Friends</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="icon" type="image/png" href="../../imagenes/mini-logo.png">
+</head>
+<body>
+    <!-- Panel principal negro -->
+    <main class="panel-negro">
+        <div class="titulo-seccion">
+            <img src="../../imagenes/pagos.png" alt="Lista de precios">
+            <h4>Pagos recibidos</h4>
+        </div>
+        <div class="botones-barra">
+            <button type="button" class="btn btn-danger" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#confirmarBorradoModal"> <i class="bi bi-trash"></i>Borrar Historial
+            </button>
+        </div>
+        <div class="tabla-contenedor">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr class="table-primary">
+                        <th># Factura</th>
+                        <th>Fecha</th>
+                        <th>Vendedor</th>
+                        <th>Total</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody id="facturas-body">
+                </tbody>
+            </table>
+        </div>
+
+        <a href="../confiiguracion.html" class="boton-atras">
+            <img src="../../imagenes/5SvJ.gif" alt="">
+            <span class="texto-atras">
+                <i class="bi bi-arrow-left-circle"></i> Atrás
+            </span>
+        </a>
+
+
+        <div class="modal fade" id="confirmarBorradoModal" tabindex="-1" aria-labelledby="confirmarBorradoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="confirmarBorradoModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> ¡ADVERTENCIA!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Está seguro de que desea borrar TODO el historial de facturas?</p>
+                    <p class="text-danger">Esto es IRREVERSIBLE. Al confirmar se eliminará todos los registros de venta.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="btn-confirmar-borrado">Si, Borrar Historial</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/productos-data.js"></script>
+<script src="../../js/productos.js"></script>
+<script src="../../js/pagos.js"></script> </body>
+</body>
+</html>
