@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault(); 
 
-    // Validación básica
+    // Validación básica-------------------------------------------------------------------------
     if (usuario.value.trim() === "" || contraseña.value.trim() === "") {
       mostrarError("Por favor completa todos los campos");
       return;
     }
 
-    // Validación de credenciales 
+    // Validación de credenciales----------------------------------------------------------------
     if (usuario.value === "sena" && contraseña.value === "123") {
       localStorage.setItem("usuarioNombre", usuario.value);
       mensajeError.style.display = "none";
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// pagina de registro
+// pagina de registro--------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-registro");
     const nombre = document.getElementById("nombre");
@@ -50,19 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mensajeError.style.display = "none";
 
-        // Validación de Campos Vacíos
+        // Validación de Campos Vacíos-------------------------------------------------------------------
         if (nombre.value.trim() === "" || correo.value.trim() === "" || codigo.value.trim() === "" || cedula.value.trim() === "" || contrasena.value.trim() === "") {
             mostrarError("Por favor completa todos los campos del formulario.");
             return;
         }
 
-        // Validación de correo
+        // Validación de correo------------------------------------------------------------------
         if (!correo.value.includes('@') || !correo.value.includes('.')) {
              mostrarError("Por favor ingresa un correo electrónico válido.");
              return;
         }
-        // Simula si el código ya existe
-        if (codigo.value.trim() === "02") { // código registrado
+        // Código ya existente---------------------------------------------------------------------
+        if (codigo.value.trim() === "02") { 
             mostrarError("El código de usuario ingresado ya está en uso.");
         } else {
             window.location.href = "../../index.html"; 

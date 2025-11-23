@@ -1,9 +1,8 @@
 // productos.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const tarjetas = document.querySelectorAll(".tarjeta");
 
-  // Lista de productos y precios
+  // Lista de productos y precios----------------------------------------------
   const precios = {
     "1 Pollo Broaster": 45000,
     "Medio Broaster": 25000,
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tarjetas.forEach((tarjeta) => {
     tarjeta.addEventListener("click", () => {
 
-      // Obtener nombre del producto
+      // Obtener nombre del producto-----------------------------------------------------
       const textoCompleto = tarjeta.querySelector("p").textContent.trim();
       const productoLimpio = textoCompleto.replace(/^\s*\d+\s*/, '').trim();
       const productoNombre = productoLimpio;
@@ -34,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const precio = precios[productoNombre];
 
-      // Pedir cantidad
+      // Pedir cantidad------------------------------------------------------------------------------
       const cantidad = parseInt(prompt(`¿Cuántas unidades de "${productoNombre}" deseas agregar?`, "1"));
       if (isNaN(cantidad) || cantidad <= 0) {
         alert("Ingrese las cantidades a facturar.");
         return;
       }
 
-      // Crear objeto producto
+      // Crear objeto producto-------------------------------------------------------------------
       const producto = {
         nombre: productoNombre,
         cantidad: cantidad,
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         vendedor: localStorage.getItem("usuarioNombre") || "Administrador"
       };
 
-      // Guardar en localStorage
+      // Guardar en localStorage----------------------------------------------------------------------------
       let productosSeleccionados = JSON.parse(localStorage.getItem("productosSeleccionados")) || [];
       productosSeleccionados.push(producto);
 

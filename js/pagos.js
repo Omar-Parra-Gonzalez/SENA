@@ -1,5 +1,4 @@
 // pagos.js
-
 function mostrarDetalles(numeroFactura) {
     const FACTURAS_GUARDADAS_KEY = "facturasGuardadas";
     const facturasGuardadas = JSON.parse(localStorage.getItem(FACTURAS_GUARDADAS_KEY)) || [];
@@ -24,7 +23,7 @@ function mostrarDetalles(numeroFactura) {
     }
 }
 
-//Carga y Borrado con Modal
+//Carga y Borrado con Modal----------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const FACTURAS_GUARDADAS_KEY = "facturasGuardadas";
     const FACTURA_KEY = "ultimaFacturaNumero"; 
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!facturasBody) return;
 
-    //Carga de la tabla
+    //Carga de la tabla------------------------------------------------------------------------------------------------------
     if (facturasGuardadas.length === 0) {
         facturasBody.innerHTML = '<tr><td colspan="5" class="text-center">No hay pagos recibidos aún.</td></tr>';
     } else {
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Boton de borrado (MODAL) 
+    //Boton de borrado (MODAL)--------------------------------------------------------------------------------------
     const btnConfirmarBorrado = document.getElementById("btn-confirmar-borrado");
     const confirmarBorradoModalElement = document.getElementById('confirmarBorradoModal');
     

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         spanFactura.textContent = formatearNumeroFactura(numeroActual);
     }
 
-    // TABLA Y CÁLCULO DE TOTAL -----------------------------------------------------
+    // TABLA Y CÁLCULO DE TOTAL ------------------------------------------------------
     let total = 0;
     if (productosSeleccionados.length === 0) {
         console.log("No hay productos seleccionados.");
@@ -82,16 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Boton imprimir ----------------------------------------------------
+    // Boton imprimir --------------------------------------------------------------------------------------
+    function esMovil() {
+        const ua = navigator.userAgent.toLowerCase();
+        return /android|iphone|ipad|ipod|mobile|blackberry|mini|windows phone|tablet|kindle/.test(ua);
+    }
     const btnImprimir = document.getElementById("btn-imprimir");
 
     if (btnImprimir) {
         btnImprimir.addEventListener('click', () => {
 
-            if (window.innerWidth < 768) {
-                alert("En dispositivos moviles no se pueden imprimir facturas.");
-                return; 
-            }
+            if (esMovil()) {
+            alert("No se pueden imprimir facturas desde dispositivos móviles.");
+            return;
+        }
 
             if (productosSeleccionados.length === 0) {
                 alert("No puedes imprimir. La factura está vacía.");
