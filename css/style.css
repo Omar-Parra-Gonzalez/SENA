@@ -904,22 +904,23 @@ a {
     }
     
     .menu-opciones .opcion {
-        width: 45px;
-        height: 40px;
+        width: 65px;
+        height: 50px;
     }
 
     .menu-opciones .opcion img {
-        width: 15px; 
-        height: 20px;
+        width: 25px; 
+        height: 25px;
         margin-bottom: 2px; 
     }
     
     .menu-opciones .opcion p {
-        font-size: 5px; 
+        font-size: 8px; 
     }
     
     .menu-lateral .logo img {
-        width: 60px; 
+        width: 95px; 
+        margin-left: 35px;
     }
 
     .usuario-info-superior {
