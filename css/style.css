@@ -882,3 +882,124 @@ a {
         bottom: auto;
     }
 }
+
+/* MÓVILES PEQUEÑOS (Max-width: 380px) */
+@media (max-width: 380px) {
+    
+    .panel-negro {
+        padding: 10px 5px; 
+    }
+
+    .menu-lateral {
+        padding: 10px 5px; 
+    }
+
+    .menu-lateral .logo {
+        margin-left: 2px;
+    }
+
+    .menu-opciones {
+        gap: 4px; 
+        margin-right: 2px;
+    }
+    
+    .menu-opciones .opcion {
+        width: 45px;
+        height: 40px;
+    }
+
+    .menu-opciones .opcion img {
+        width: 15px; 
+        height: 20px;
+        margin-bottom: 2px; 
+    }
+    
+    .menu-opciones .opcion p {
+        font-size: 5px; 
+    }
+    
+    .menu-lateral .logo img {
+        width: 60px; 
+    }
+
+    .usuario-info-superior {
+        display: none;
+    }
+
+    .barra-superior {
+        flex-direction: column; 
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .input-group {
+        width: 100%; 
+    }
+    
+    .botones-barra {
+        max-width: 250px; 
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 5px 4px; 
+        font-size: 10px;
+    }
+
+    .tarjetas-inventario {
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .tarjeta {
+        max-width: 200px; 
+        padding: 20px 10px;
+    }
+
+    .tabla-contenedor {
+        margin-top: 15px;
+        width: 100%;
+        overflow-x: auto; 
+    }
+
+    .tabla-contenedor table {
+        width: 100%;
+        min-width: 300px; 
+    }
+    
+    .encabezado-factura {
+        flex-direction: column; 
+        padding: 5px 0;
+    }
+    
+    .info-empresa,
+    .info-factura,
+    .datos-cliente {
+        width: 100%;
+        text-align: center;
+        padding: 3px 0;
+    }
+
+    .tabla-factura th,
+    .tabla-factura td {
+        font-size: 10px; 
+        padding: 4px 3px;
+    }
+
+    .tabla-internos-contenedor {
+        width: 100%;
+        overflow-x: auto; 
+    }
+
+    .tabla-internos-contenedor table {
+        width: 100%;
+        min-width: 300px; 
+    }
+
+    .tabla-internos-contenedor th,
+    .tabla-internos-contenedor td {
+        font-size: 9px;
+        padding: 4px 2px;
+    }
+
+}
