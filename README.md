@@ -1,4 +1,4 @@
-Proyecto para presentar en el tecnologo de Analisis y desarrollo software del Sena temas utilizados:
+Proyecto para presentar en el tecnologo de Análisis y desarrollo software (ADSO) Sena temas utilizados:
 HTML
 CSS
 JavaScript
