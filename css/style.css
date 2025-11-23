@@ -883,8 +883,8 @@ a {
     }
 }
 
-/* MÓVILES PEQUEÑOS (Max-width: 380px) */
-@media (max-width: 380px) {
+/* MÓVILES PEQUEÑOS (Max-width: 450px) */
+@media (max-width: 450px) {
     
     .panel-negro {
         padding: 10px 5px; 
