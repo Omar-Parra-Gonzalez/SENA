@@ -1,4 +1,13 @@
 //index
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-login");
+  const usuario = document.getElementById("codigo");
+  const contraseña = document.getElementById("contraseña");
+  const mensajeError = document.getElementById("mensaje-error");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+
     // Validación básica-------------------------------------------------------------------------
     if (usuario.value.trim() === "" || contraseña.value.trim() === "") {
       mostrarError("Por favor completa todos los campos");
