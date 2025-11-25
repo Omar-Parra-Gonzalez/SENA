@@ -688,16 +688,6 @@ a {
   background-image: url('../imagenes/JUGOS.jpg');
 }
 
-.tarjeta {
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-}
-
 /* AJUSTE PARA LA TABLA DE PRECIOS */
 .panel-negro .TABLA-PRECIOS {
     width: 100%; 
@@ -706,7 +696,7 @@ a {
     margin-right: auto; 
 }
 
-/* Móviles (Max-width: 768px) */
+/* Móviles (Max-width: 768px)------------------------------------------------------------------ */
 @media (max-width: 768px) {
     
     .contenedor-login {
@@ -715,6 +705,10 @@ a {
         min-height: 100vh;
         padding: 20px 15px;
         align-items: center;
+    }
+
+    .logo-inferior {
+        display: none;
     }
 
     .lado-izquierdo {
@@ -833,6 +827,13 @@ a {
     .tarjeta {
         width: 100%; 
         padding: 25px 15px;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        position: relative;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
     }
     
     .encabezado-factura {
@@ -883,11 +884,15 @@ a {
     }
 }
 
-/* MÓVILES PEQUEÑOS (Max-width: 450px) */
+/* Moviles pequeños (Max-width: 450px)----------------------------------------- */
 @media (max-width: 450px) {
     
     .panel-negro {
         padding: 10px 5px; 
+    }
+
+    .logo-inferior {
+        display: none;
     }
 
     .menu-lateral {
