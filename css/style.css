@@ -641,51 +641,68 @@ a {
 }
 
 .pollo-broaster {
-  background-image: url('../imagenes/entero.jpg');
+  background-image: url("../imagenes/entero.jpg");
 }
 
 .medio-broaster {
-  background-image: url('../imagenes/medio.jpg');
+  background-image: url("../imagenes/medio.jpg");
 }
 
 .cuarto-broaster {
-  background-image: url('../imagenes/cuarto.jpg');
+  background-image: url("../imagenes/cuarto.jpg");
 }
 
 .presa-broaster {
-  background-image: url('../imagenes/presa-sola.jpg');
+  background-image: url("../imagenes/presa-sola.jpg");
 }
 
 .papa-amarilla {
-  background-image: url('../imagenes/Papitas-Criollas-Fritas-Saludables-RecetasFusion.jpg');
+  background-image: url("../imagenes/Papitas-Criollas-Fritas-Saludables-RecetasFusion.jpg");
 }
 
 .papa-francesa {
-  background-image: url('../imagenes/francesa.jpg');
+  background-image: url("../imagenes/francesa.jpg");
 }
 
 .combo-familiar {
-  background-image: url('../imagenes/nuevo-combo-familiar.png');
+  background-image: url("../imagenes/nuevo-combo-familiar.png");
 }
 
 .yuca-frita {
-  background-image: url('../imagenes/yuca.jpg');
+  background-image: url("../imagenes/yuca.jpg");
 }
 
 .coc-3 {
-  background-image: url('../imagenes/gaseosa-coca-cola-3-lt.jpg');
+  background-image: url("../imagenes/gaseosa-coca-cola-3-lt.jpg");
 }
 
 .coc-medio {
-  background-image: url('../imagenes/medio\ litro.jpg');
+  background-image: url("../imagenes/MEDIO_LITRO.jpg");
 }
 
 .coc-400 {
-  background-image: url('../imagenes/gaseosa-coca-cola-400-ml.jpg');
+  background-image: url("../imagenes/gaseosa-coca-cola-400-ml.jpg");
 }
 
 .jugo-na {
-  background-image: url('../imagenes/JUGOS.jpg');
+  background-image: url("../imagenes/JUGOS.jpg");
+}
+
+.pollo-broaster,
+.medio-broaster,
+.cuarto-broaster,
+.presa-broaster,
+.papa-amarilla,
+.papa-francesa,
+.combo-familiar,
+.yuca-frita,
+.coc-3,
+.coc-medio,
+.coc-400,
+.jugo-na {
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 /* AJUSTE PARA LA TABLA DE PRECIOS */
