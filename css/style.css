@@ -714,7 +714,7 @@ a {
 }
 
 /* Móviles (Max-width: 768px)------------------------------------------------------------------ */
-@media (min-width: 750px) and (max-width: 1200px) {
+@media (max-width: 768px) {
     
     .contenedor-login {
         flex-direction: column; 
@@ -736,13 +736,15 @@ a {
     
     .lado-izquierdo img {
         width: 80%; 
+        margin-top: 70px;
         max-width: 420px;
     }
 
     .lado-derecho {
         flex: none;
         height: auto;
-        padding-top: 45px;
+        padding-top: 30px;
+        margin-top: 35px;
         transform: translateX(0); 
         width: 100%;
     }
@@ -903,9 +905,8 @@ a {
 
 /* Moviles pequeños (Max-width: 450px)----------------------------------------- */
 @media (max-width: 450px) {
-    
     .panel-negro {
-        padding: 10px 5px; 
+        padding: 10px 5px;
     }
 
     .logo-inferior {
@@ -913,7 +914,7 @@ a {
     }
 
     .menu-lateral {
-        padding: 10px 5px; 
+        padding: 10px 5px;
     }
 
     .menu-lateral .logo {
@@ -921,27 +922,27 @@ a {
     }
 
     .menu-opciones {
-        gap: 4px; 
+        gap: 4px;
         margin-right: 2px;
     }
-    
+
     .menu-opciones .opcion {
         width: 65px;
         height: 50px;
     }
 
     .menu-opciones .opcion img {
-        width: 25px; 
+        width: 25px;
         height: 25px;
-        margin-bottom: 2px; 
+        margin-bottom: 2px;
     }
-    
+
     .menu-opciones .opcion p {
-        font-size: 8px; 
+        font-size: 8px;
     }
-    
+
     .menu-lateral .logo img {
-        width: 95px; 
+        width: 95px;
         margin-left: 35px;
     }
 
@@ -950,22 +951,22 @@ a {
     }
 
     .barra-superior {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 10px;
         margin-top: 10px;
     }
 
     .input-group {
-        width: 100%; 
+        width: 100%;
     }
-    
+
     .botones-barra {
-        max-width: 250px; 
+        max-width: 250px;
         gap: 5px;
     }
-    
+
     .btn {
-        padding: 5px 4px; 
+        padding: 5px 4px;
         font-size: 10px;
     }
 
@@ -973,28 +974,28 @@ a {
         gap: 10px;
         margin-top: 20px;
     }
-    
+
     .tarjeta {
-        max-width: 200px; 
+        max-width: 200px;
         padding: 20px 10px;
     }
 
     .tabla-contenedor {
         margin-top: 15px;
         width: 100%;
-        overflow-x: auto; 
+        overflow-x: auto;
     }
 
     .tabla-contenedor table {
         width: 100%;
-        min-width: 300px; 
+        min-width: 300px;
     }
-    
+
     .encabezado-factura {
-        flex-direction: column; 
+        flex-direction: column;
         padding: 5px 0;
     }
-    
+
     .info-empresa,
     .info-factura,
     .datos-cliente {
@@ -1005,18 +1006,18 @@ a {
 
     .tabla-factura th,
     .tabla-factura td {
-        font-size: 10px; 
+        font-size: 10px;
         padding: 4px 3px;
     }
 
     .tabla-internos-contenedor {
         width: 100%;
-        overflow-x: auto; 
+        overflow-x: auto;
     }
 
     .tabla-internos-contenedor table {
         width: 100%;
-        min-width: 300px; 
+        min-width: 300px;
     }
 
     .tabla-internos-contenedor th,
@@ -1024,5 +1025,4 @@ a {
         font-size: 9px;
         padding: 4px 2px;
     }
-
 }
