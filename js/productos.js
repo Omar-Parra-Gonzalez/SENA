@@ -1,64 +1,64 @@
-// productos.js
+//productos.js
 document.addEventListener("DOMContentLoaded", () => {
   const tarjetas = document.querySelectorAll(".tarjeta");
 
-  // Lista de productos y precios----------------------------------------------
-  const precios = {
-    "1 Pollo Broaster": 45000,
-    "Medio Broaster": 25000,
-    "Cuarto Broaster": 15000,
-    "Presa Broaster": 8000,
-    "Papa Amarilla": 6000,
-    "Porción Francesa": 5000,
-    "Combo Familiar": 65000,
-    "Yuca Frita": 6000,
-    "Coca Cola 3L": 7000,
-    "Coca Cola medio litro": 4000,
-    "Coca Cola 400ml": 3000,
-    "Jugo Natural": 5000
-  };
-
   tarjetas.forEach((tarjeta) => {
-    tarjeta.addEventListener("click", () => {
+    tarjeta.addEventListener("click", async () => {
 
-      // Obtener nombre del producto-----------------------------------------------------
-      const textoCompleto = tarjeta.querySelector("p").textContent.trim();
-      const productoLimpio = textoCompleto.replace(/^\s*\d+\s*/, '').trim();
-      const productoNombre = productoLimpio;
+      const idProducto = tarjeta.getAttribute("data-id");
 
-      if (!precios[productoNombre]) {
-        alert(productoNombre +" ¡NO ENCONTRADO!");
+      const respuesta = await fetch(`http://localhost:8080/api/productos/${idProducto}`);
+      const productoBD = await respuesta.json();
+
+      if (!productoBD) {
+        alert("Producto no encontrado en la base de datos.");
         return;
       }
 
-      const precio = precios[productoNombre];
+      const disponible = productoBD.cantidad;
 
-      // Pedir cantidad------------------------------------------------------------------------------
-      const cantidad = parseInt(prompt(`¿Cuántas unidades de "${productoNombre}" deseas agregar?`, "1"));
+      if (disponible <= 0) {
+        alert(`No hay productos disponibles de ${productoBD.producto}`);
+        return;
+      }
+
+      // Pedir cantidad
+      const cantidad = parseInt(prompt(`¿Cuántas unidades deseas agregar? Disponible: ${disponible}`, "1"));
+
       if (isNaN(cantidad) || cantidad <= 0) {
-        alert("Ingrese las cantidades a facturar.");
+        alert("Cantidad inválida.");
         return;
       }
 
-      // Crear objeto producto-------------------------------------------------------------------
+      if (cantidad > disponible) {
+        alert(`No puedes agregar ${cantidad}. Solo hay ${disponible} unidades.`);
+        return;
+      }
+
+      // Restar el inventario en Base de Datos
+      await fetch(`http://localhost:8080/api/productos/descontar/${idProducto}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cantidad: cantidad })
+      });
+
+      // Crear objeto 
       const producto = {
-        nombre: productoNombre,
+        nombre: productoBD.producto,
         cantidad: cantidad,
-        precio: precio,
-        total: precio * cantidad,
+        precio: productoBD.precio,
+        total: productoBD.precio * cantidad,
         tipo: "Domicilio",
         vendedor: localStorage.getItem("usuarioNombre") || "Administrador"
       };
 
-      // Guardar en localStorage----------------------------------------------------------------------------
+      // Guardar en localStorage
       let productosSeleccionados = JSON.parse(localStorage.getItem("productosSeleccionados")) || [];
       productosSeleccionados.push(producto);
-
       localStorage.setItem("productosSeleccionados", JSON.stringify(productosSeleccionados));
 
-      alert(`"${productoNombre}" agregado al pedido (${cantidad} unidades).`);
+      alert(`"${productoBD.producto}" agregado (${cantidad} unidades).`);
       window.location.href = "../panel.html";
     });
   });
 });
-

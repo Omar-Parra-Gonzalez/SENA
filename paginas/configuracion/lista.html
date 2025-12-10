@@ -24,71 +24,25 @@
                 <th scope="col">#</th>
                 <th scope="col">PRODUCTO</th>
                 <th scope="col">PRECIO</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acciones</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>1 Pollo Broaster</td>
-                    <td>$ 45.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Medio Broaster</td>
-                    <td>$ 25.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Cuarto Broaster</td>
-                    <td>$ 15.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Presa Broaster</td>
-                    <td>$ 8.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Papa Amarilla</td>
-                    <td>$ 6.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Porcion de Francesa</td>
-                    <td>$ 5.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>Combo Familiar</td>
-                    <td>$ 65.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td>Yuca Frita</td>
-                    <td>$ 6.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">9</th>
-                    <td>Coca Cola 3L</td>
-                    <td>$ 7.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">10</th>
-                    <td>Coca Cola Medio Litro</td>
-                    <td>$ 4.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">11</th>
-                    <td>Coca Cola 400ML</td>
-                    <td>$ 3.000</td>
-                </tr>
-                <tr>
-                    <th scope="row">12</th>
-                    <td>Jugo Natural</td>
-                    <td>$ 5.000</td>
-                </tr>
+            <tbody id="lista-productos">
+                
             </tbody>
         </table>
+
+        <h3>Gestión de Productos</h3>
+        <form id="form-producto" class="form-producto">
+            <input type="hidden" id="id_producto">
+            <input type="text" id="producto" placeholder="Producto" required>
+            <input type="number" id="precio" placeholder="Precio" required>
+            <input type="number" id="cantidad" placeholder="Cantidad" required>
+            <div class="botones-form">
+                <button type="submit" class="btn-guardar">Guardar</button>
+            </div>
+        </form>
         <a href="../confiiguracion.html" class="boton-atras">
             <img src="../../imagenes/5SvJ.gif" alt="">
             <span class="texto-atras">
@@ -97,8 +51,6 @@
         </a>
     </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../js/productos-data.js"></script>
-<script src="../../js/productos.js"></script>
-<script src="../../js/pagos.js"></script> </body>
+<script src="../../js/lista.js"></script>
 </body>
 </html>

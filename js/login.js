@@ -1,4 +1,4 @@
-//index
+//login.js
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form-login");
   const usuario = document.getElementById("codigo");

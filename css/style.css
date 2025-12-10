@@ -479,6 +479,7 @@ a {
 
 .tabla-contenedor {
     margin-top: 20px; 
+    max-width: 700px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -641,7 +642,7 @@ a {
 }
 
 .pollo-broaster {
-  background-image: url("../imagenes/entero.jpg");
+  background-image: url("../imagenes/entero.gif");
 }
 
 .medio-broaster {
@@ -649,7 +650,7 @@ a {
 }
 
 .cuarto-broaster {
-  background-image: url("../imagenes/cuarto.jpg");
+  background-image: url("../imagenes/cuarto.gif");
 }
 
 .presa-broaster {
@@ -657,35 +658,35 @@ a {
 }
 
 .papa-amarilla {
-  background-image: url("../imagenes/Papitas-Criollas-Fritas-Saludables-RecetasFusion.jpg");
+  background-image: url("../imagenes/papa-amarilla.avif");
 }
 
 .papa-francesa {
-  background-image: url("../imagenes/francesa.jpg");
+  background-image: url("../imagenes/francesa.avif");
 }
 
 .combo-familiar {
-  background-image: url("../imagenes/nuevo-combo-familiar.png");
+  background-image: url("../imagenes/combo-familiar.jpg");
 }
 
 .yuca-frita {
-  background-image: url("../imagenes/yuca.jpg");
+  background-image: url("../imagenes/yuca.webp");
 }
 
 .coc-3 {
-  background-image: url("../imagenes/gaseosa-coca-cola-3-lt.jpg");
+  background-image: url("../imagenes/Coca-3L.gif");
 }
 
 .coc-medio {
-  background-image: url("../imagenes/MEDIO_LITRO.jpg");
+  background-image: url("../imagenes/medio-litro.gif");
 }
 
 .coc-400 {
-  background-image: url("../imagenes/gaseosa-coca-cola-400-ml.jpg");
+  background-image: url("../imagenes/coca-400ml.jpg");
 }
 
 .jugo-na {
-  background-image: url("../imagenes/JUGOS.jpg");
+  background-image: url("../imagenes/jugos.gif");
 }
 
 .pollo-broaster,
@@ -705,12 +706,98 @@ a {
   background-repeat: no-repeat; 
 }
 
-/* AJUSTE PARA LA TABLA DE PRECIOS */
+.acciones-producto {
+    display: flex;
+    gap: 8px;        
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-amarillo {
+    background-color: #FEFB64;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-rojo {
+    background-color: #B70F0A;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-amarillo:hover {
+    opacity: 0.85;
+}
+
+.btn-rojo:hover {
+    opacity: 0.85;
+}
+
+/* AJUSTE PARA LA TABLA DE PRECIOS ----------------------------------------------------------*/
 .panel-negro .TABLA-PRECIOS {
     width: 100%; 
     max-width: 700px; 
     margin-left: auto;
     margin-right: auto; 
+}
+
+/* Contenedor del formulario -----------------------------------------------------------------*/
+.form-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 250px;          
+    margin: 0 auto;          
+}
+
+.form-producto input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #EDE3E1;     
+    color: black;
+    font-size: 11px;
+    width: 100%;          
+}
+
+.form-producto input::placeholder {
+   color: #5a5a5a;          
+}
+
+/* Contenedor de botones */
+.botones-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Botón Guardar */
+.btn-guardar {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #3CC93C;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hover */
+.btn-guardar:hover {
+    background: #32aa32;
 }
 
 /* Móviles (Max-width: 768px)------------------------------------------------------------------ */
