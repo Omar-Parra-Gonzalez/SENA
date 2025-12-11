@@ -15,15 +15,15 @@
     <main class="panel-negro">
         <div class="titulo-seccion">
             <img src="../../imagenes/precio.png" alt="Lista de precios">
-            <h4>Lista de precios</h4>
+            <h4>Lista de precios<button onclick="abrirModalProducto(true)" class="btn btn-guardar-chf">Nuevo Producto</button></h4>
         </div>
 
         <table class="table table-dark table-striped table-hover TABLA-PRECIOS">
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">PRODUCTO</th>
-                <th scope="col">PRECIO</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Acciones</th>
                 </tr>
@@ -32,17 +32,6 @@
                 
             </tbody>
         </table>
-
-        <h3>Gestión de Productos</h3>
-        <form id="form-producto" class="form-producto">
-            <input type="hidden" id="id_producto">
-            <input type="text" id="producto" placeholder="Producto" required>
-            <input type="number" id="precio" placeholder="Precio" required>
-            <input type="number" id="cantidad" placeholder="Cantidad" required>
-            <div class="botones-form">
-                <button type="submit" class="btn-guardar">Guardar</button>
-            </div>
-        </form>
         <a href="../confiiguracion.html" class="boton-atras">
             <img src="../../imagenes/5SvJ.gif" alt="">
             <span class="texto-atras">
@@ -50,6 +39,43 @@
             </span>
         </a>
     </main>
+    <div class="modal fade" id="modalGestionProducto" tabindex="-1" aria-labelledby="modalLabelProducto" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-bottom border-secondary">
+                    <h5 class="modal-title" id="modalLabelProducto">Gestión de Productos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="form-producto">
+                    <div class="modal-body">
+                        <input type="hidden" id="id_producto" name="id_producto"> 
+                        
+                        <div class="mb-3">
+                            <label for="producto" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control bg-secondary text-light border-dark" id="producto" placeholder="Producto" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" class="form-control bg-secondary text-light border-dark" id="precio" placeholder="Precio" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control bg-secondary text-light border-dark" id="cantidad" placeholder="Cantidad" required>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal-footer border-top border-secondary">
+                        <button type="button" class="btn btn-cancelar-chf" data-bs-dismiss="modal">Cancelar</button>
+
+                        <button type="submit" class="btn btn-guardar-chf">Guardar</button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../js/lista.js"></script>
 </body>

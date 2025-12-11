@@ -706,7 +706,8 @@ a {
   background-repeat: no-repeat; 
 }
 
-.acciones-producto {
+.acciones-producto 
+.acciones-usuario{
     display: flex;
     gap: 8px;        
     align-items: center;
@@ -742,6 +743,32 @@ a {
 .btn-rojo:hover {
     opacity: 0.85;
 }
+/* Estilo del modal usuarios -------------------------------------------------------*/
+.btn-guardar-chf {
+    background-color: #0FD912 !important; 
+    color: #000000 !important; 
+    border-color: #08a00f !important; 
+    border-width: 2px;
+}
+
+.btn-guardar-chf:hover {
+    background-color: #08a00f !important; 
+    color: #ffffff !important;
+}
+
+.btn-cancelar-chf {
+    background-color: #FEFB64 !important; 
+    color: #000000 !important; 
+    border-color: #e0d05a !important; 
+    border-width: 2px;
+}
+
+.btn-cancelar-chf:hover {
+    background-color: #e0d05a !important; 
+    color: #000000 !important;
+}
+
+
 
 /* AJUSTE PARA LA TABLA DE PRECIOS ----------------------------------------------------------*/
 .panel-negro .TABLA-PRECIOS {
@@ -751,53 +778,16 @@ a {
     margin-right: auto; 
 }
 
-/* Contenedor del formulario -----------------------------------------------------------------*/
-.form-producto {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 250px;          
-    margin: 0 auto;          
+/* Tabla usuarios internos --------------------------------------------*/
+.internos-contenedor {
+    margin: 20px auto 0 auto; 
+    max-width: 900px;
+    width: 95%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
-
-.form-producto input {
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    background: #EDE3E1;     
-    color: black;
-    font-size: 11px;
-    width: 100%;          
-}
-
-.form-producto input::placeholder {
-   color: #5a5a5a;          
-}
-
-/* Contenedor de botones */
-.botones-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+.internos-contenedor table {
     width: 100%;
-}
-
-/* Botón Guardar */
-.btn-guardar {
-    flex: 1;
-    padding: 10px 0;
-    border: none;
-    border-radius: 10px;
-    background: #3CC93C;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Hover */
-.btn-guardar:hover {
-    background: #32aa32;
 }
 
 /* Móviles (Max-width: 768px)------------------------------------------------------------------ */
