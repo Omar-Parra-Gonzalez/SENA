@@ -1,38 +1,26 @@
-const API_URL = "http://localhost:8080/api/productos";
+const API_URL = "https://[dominio-de-railway].up.railway.app/api/productos";
 
-// =========================================================
-// FUNCIONES DE CONTROL DEL MODAL
-// =========================================================
+// Funciones del modal
 
-/**
- * Abre y configura el modal para CREAR o EDITAR.
- * @param {boolean} esNuevo - Indica si se está creando un producto (true) o si es una carga inicial (false).
+/** Configura el modal en editar.
+@param {boolean} esNuevo 
  */
 function abrirModalProducto(esNuevo = true) {
     const modalElement = document.getElementById('modalGestionProducto');
-    // Inicializa o obtiene la instancia del modal de Bootstrap
     const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
     const form = document.getElementById('form-producto');
     
-    // Si es un producto nuevo (al hacer clic en "Crear Nuevo"):
     if (esNuevo) {
-        // 1. Limpia el formulario
         form.reset();
         document.getElementById('id_producto').value = '';
-        // 2. Actualiza el título
         document.getElementById('modalLabelProducto').textContent = 'Crear Nuevo Producto';
     } else {
-        // Si no es nuevo (viene de editarProducto), solo actualiza el título.
         document.getElementById('modalLabelProducto').textContent = 'Editar Producto';
     }
     
-    // 3. Muestra el modal
     modal.show();
 }
 
-/**
- * Cierra el modal de gestión de productos.
- */
 function cerrarModalProducto() {
     const modalElement = document.getElementById('modalGestionProducto');
     const modalInstance = bootstrap.Modal.getInstance(modalElement);
@@ -41,12 +29,7 @@ function cerrarModalProducto() {
     }
 }
 
-
-// =========================================================
-// CARGA Y GENERACIÓN DE TABLA
-// =========================================================
-
-// Cargar lista 
+// Carga la tabla
 function cargarProductos() {
     fetch(API_URL)
     .then(response => response.json())
@@ -83,28 +66,19 @@ function cargarProductos() {
 }
 
 
-// =========================================================
-// LÓGICA DE EDICIÓN Y ELIMINACIÓN
-// =========================================================
-
-// Cargar datos en el formulario para editar Y MOSTRAR MODAL
+// Eliminar datos -------------------------------------------------------------
 function editarProducto(id) {
     fetch(`${API_URL}/${id}`)
     .then(response => response.json())
     .then(prod => {
-        // 1. Carga los datos en el formulario
         document.getElementById("id_producto").value = prod.id_producto;
         document.getElementById("producto").value = prod.producto;
         document.getElementById("precio").value = prod.precio;
         document.getElementById("cantidad").value = prod.cantidad;
-        
-        // 2. Abre el modal en modo EDICIÓN
         abrirModalProducto(false); 
     })
     .catch(error => console.error("Error al cargar producto para editar:", error));
 }
-
-// Eliminar producto
 function eliminarProducto(id) {
     if (!confirm("¿Seguro que quieres eliminar este producto?")) return;
 
@@ -112,13 +86,7 @@ function eliminarProducto(id) {
     .then(res => cargarProductos())
     .catch(error => console.error("Error eliminando producto:", error));
 }
-
-
-// =========================================================
-// LÓGICA DE GUARDAR/ACTUALIZAR
-// =========================================================
-
-// Guardar o actualizar (con CIERRE DE MODAL)
+// Guardar o actualizar --------------------------------------------------------------------- 
 document.getElementById("form-producto").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -136,7 +104,6 @@ document.getElementById("form-producto").addEventListener("submit", function (e)
         body: JSON.stringify(datos)
     })
     .then(res => {
-        // CIERRA EL MODAL después de guardar/actualizar
         cerrarModalProducto(); 
         
         cargarProductos();
@@ -144,10 +111,4 @@ document.getElementById("form-producto").addEventListener("submit", function (e)
     })
     .catch(error => console.error("Error al guardar producto:", error));
 });
-
-// =========================================================
-// INICIO DE LA APLICACIÓN
-// =========================================================
-
-// Inicialmente carga la tabla
 cargarProductos();
