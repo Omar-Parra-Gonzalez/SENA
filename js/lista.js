@@ -1,4 +1,4 @@
-const API_URL = "https://[dominio-de-railway].up.railway.app/api/productos";
+const API_URL = "http://localhost:8080/api/productos";
 
 // Funciones del modal
 
