@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/productos";
+const API_URL = "https://sena-backend-z8tt.onrender.com/api/productos";
 
 // Funciones del modal
 

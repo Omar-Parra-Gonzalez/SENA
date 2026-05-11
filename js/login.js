@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const respuesta = await fetch("http://localhost:8080/api/usuarios/login", {
+      const respuesta = await fetch("https://sena-backend-z8tt.onrender.com/api/usuarios/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datosLogin)
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const respuesta = await fetch("http://localhost:8080/api/usuarios", {
+      const respuesta = await fetch("https://sena-backend-z8tt.onrender.com/api/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(usuarioNuevo)
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!cuerpoTabla) return;
 
   try {
-    const respuesta = await fetch("http://localhost:8080/api/usuarios");
+    const respuesta = await fetch("https://sena-backend-z8tt.onrender.com/api/usuarios");
     if (!respuesta.ok) throw new Error("Error cargando usuarios");
 
     const usuarios = await respuesta.json();
@@ -179,7 +179,7 @@ async function borrarUsuario(id) {
   if (!confirm("¿Seguro que deseas borrar este usuario?")) return;
 
   try {
-    const respuesta = await fetch(`http://localhost:8080/api/usuarios/${id}`, { 
+    const respuesta = await fetch(`https://sena-backend-z8tt.onrender.com/api/usuarios/${id}`, { 
   method: "DELETE"
     });
 
@@ -200,7 +200,7 @@ async function borrarUsuario(id) {
 // Función Auxiliar: Obtener datos de un solo usuario por ID
 async function obtenerUsuarioPorId(id) {
     // La URL ahora recibe un ID válido, no 'undefined'
-    const respuesta = await fetch(`http://localhost:8080/api/usuarios/${id}`);
+    const respuesta = await fetch(`https://sena-backend-z8tt.onrender.com/api/usuarios/${id}`);
     if (!respuesta.ok) {
         // Mejoramos el manejo de errores si el usuario no existe (404)
         throw new Error("Error obteniendo datos del usuario. ID no encontrado.");
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // Envío del PUT al Backend
-            const respuesta = await fetch(`http://localhost:8080/api/usuarios/${id}`, {
+            const respuesta = await fetch(`https://sena-backend-z8tt.onrender.com/api/usuarios/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

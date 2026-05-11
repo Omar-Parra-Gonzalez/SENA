@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const idProducto = tarjeta.getAttribute("data-id");
 
-      const respuesta = await fetch(`http://localhost:8080/api/productos/${idProducto}`);
+      const respuesta = await fetch(`https://sena-backend-z8tt.onrender.com/api/productos/${idProducto}`);
       const productoBD = await respuesta.json();
 
       if (!productoBD) {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Restar el inventario en Base de Datos
-      await fetch(`http://localhost:8080/api/productos/descontar/${idProducto}`, {
+      await fetch(`https://sena-backend-z8tt.onrender.com/api/productos/descontar/${idProducto}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cantidad: cantidad })
