@@ -5,4 +5,4 @@ Frontend: Vercel
 Backend: Render
 Base de datos: Aiven
 Este proyecto tiene como objetivo aplicar conocimientos de desarrollo full stack, integración de bases de datos, despliegue en la nube y consumo de APIs en un entorno real.
-https://sena-self.vercel.app/paginas/panel.html
+https://sena-fq9ktltwh-omar-parras-projects.vercel.app/index.html
