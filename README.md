@@ -10,3 +10,13 @@ Para su despliegue y acceso en línea se utilizaron las siguientes plataformas:
 
 Este proyecto tiene como objetivo aplicar conocimientos de desarrollo full stack, integración de bases de datos, despliegue en la nube y consumo de APIs en un entorno real.
 https://sena-fq9ktltwh-omar-parras-projects.vercel.app/index.html
+
+Chicken Friends Backend es la parte servidor del proyecto desarrollado como parte del programa Tecnólogo en Análisis y Desarrollo de Software (ADSO) del SENA.
+Este backend fue construido con Java y Spring Boot implementando una API REST para la gestión de usuarios, autenticación, productos e inventario. Además, integra persistencia de datos mediante 
+MySQL y conexión a base de datos remota.
+**Tecnologías utilizadas:
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- MySQL
+- Maven
