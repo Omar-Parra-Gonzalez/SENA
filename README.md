@@ -4,9 +4,9 @@ La aplicación fue construida utilizando tecnologías de desarrollo web y backen
 
 Para su despliegue y acceso en línea se utilizaron las siguientes plataformas:
 
-•	Frontend: Vercel
-•	Backend: Render
-•	Base de datos: Aiven
+-Frontend: Vercel
+-Backend: Render
+-Base de datos: Aiven
 
 Este proyecto tiene como objetivo aplicar conocimientos de desarrollo full stack, integración de bases de datos, despliegue en la nube y consumo de APIs en un entorno real.
 https://sena-fq9ktltwh-omar-parras-projects.vercel.app/index.html
